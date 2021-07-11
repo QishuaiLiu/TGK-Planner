@@ -37,6 +37,6 @@ add_executable(so3_disturbance_generator src/so3_disturbance_generator.cpp)
 target_link_libraries(so3_disturbance_generator 
    ${catkin_LIBRARIES}
    ${ARMADILLO_LIBRARIES}
-   pose_utils 
+   ${pose_utils_LIBRARIES}  
 )
 

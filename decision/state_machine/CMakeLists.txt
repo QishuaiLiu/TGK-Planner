@@ -16,9 +16,11 @@ find_package(catkin REQUIRED COMPONENTS
     quadrotor_msgs
     visualization_utils
     self_msgs_and_srvs
+    tf2_ros
 )
 
 find_package(Eigen3 REQUIRED)
+find_package(OpenCV REQUIRED)
 find_package(PCL 1.7 REQUIRED)
 
 catkin_package(
@@ -40,6 +42,7 @@ add_executable(${PROJECT_NAME}_node
     src/fsm.cpp
 )
 target_link_libraries(${PROJECT_NAME}_node
+    ${OpenCV_LIBS}
     ${catkin_LIBRARIES}
     ${PCL_LIBRARIES}
 )

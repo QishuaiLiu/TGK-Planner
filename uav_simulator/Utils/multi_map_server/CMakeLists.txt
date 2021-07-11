@@ -149,6 +149,7 @@ include_directories(include)
 include_directories(
   ${catkin_INCLUDE_DIRS}
 )
+include_directories(msg_gen/cpp/include)
 
 ## Declare a cpp library
 # add_library(irobot_msgs
@@ -166,7 +167,7 @@ add_executable(multi_map_visualization src/multi_map_visualization.cc)
 target_link_libraries(multi_map_visualization 
    ${catkin_LIBRARIES}
    ${ARMADILLO_LIBRARIES}
-   pose_utils
+   ${pose_utils_LIBRARIES}
 )
 
 #############
